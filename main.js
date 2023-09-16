@@ -1,4 +1,4 @@
-// Este algoritmo para calcular las notas promedio de un alumno en el 
+// Este algoritmo calcula las notas promedio de un alumno en el curso de JavaScript
 
 let apellido = prompt("Este algoritmo te ayuda a calcular la nota promedio de un alumno del curso de JavaScript, ingresar apellido")
 // funcion para calcular promedio de notas 
@@ -12,9 +12,9 @@ function promedio(cantidad, suma) {
   let seguir = true;
   
   // Bucle para pedir las notas al usuario
-  while (seguir) {
+while (seguir) {
     
-    let nota = prompt(nombre,"Ingrese una NOTA o presione CANCELAR para terminar");
+    let nota = prompt("Ingrese una NOTA o presione CANCELAR para terminar");
   
      if (nota === null) {
       seguir = false;
@@ -27,16 +27,19 @@ function promedio(cantidad, suma) {
         cantidad++;
         suma += nota;
       } else {
-        // Si la nota no es válida, mostrar un mensaje de error
-        alert("La nota debe ser un número entre 0 y 10");
+
+        alert("La NOTA debe ser un número entre 0 y 10");
       }
     }
   }
   
-  // Si hay al menos una nota, calcular y mostrar el promedio
-  if (cantidad > 0) {
-    let promedioNotas = promedio(cantidad, suma);
-    alert(apellido + " : "+"El promedio de las notas es " + promedioNotas);
-  } else {
-    alert(apellido + " : "+"No se ingresaron notas");
+if (cantidad > 0) {
+
+       let promedioNotas = promedio(cantidad, suma);
+
+      alert(apellido + " : "+"El promedio de las notas es: " + promedioNotas);
+  } 
+  else {
+
+      alert(apellido + " : "+"No se ingresaron notas");
   }
